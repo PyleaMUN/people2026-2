@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PyleaMUN Team</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { --nav-bg:#f8f8f0; --teal:#006d7a; --gold:#c59d12; --cream:#f8f5ec; --text-dark:#333; }
+    body { margin:0; padding-top:56px; font-family:'Lato',sans-serif; background:var(--cream); color:var(--text-dark); }
+    .navbar-custom{ background:var(--nav-bg); box-shadow:0 2px 4px rgba(0,0,0,.1); }
+    header{text-align:center; margin:2rem 0;} header img{max-width:200px; margin-bottom:1rem;}
+    h1{ font-family:'Playfair Display',serif; color:var(--teal); font-size:2.5rem; margin-bottom:2rem; }
+    .section{ margin-bottom:3rem; }
+    .section h2{ font-family:'Playfair Display',serif; color:var(--gold); font-size:1.8rem; border-bottom:2px solid var(--teal); display:inline-block; padding-bottom:.2rem; margin-bottom:1rem; }
+    .role-btn{ display:block; width:100%; text-align:left; background:none; border:2px solid var(--teal); padding:.5rem; border-radius:4px; font-weight:bold; color:var(--teal); transition:.3s; margin-bottom:.5rem; }
+    .role-btn:hover{ background:var(--teal); color:#fff; }
+    .modal-overlay{ position:fixed; inset:0; background:rgba(0,0,0,.6); display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transition:.3s; z-index:1050; }
+    .modal-overlay.active{ opacity:1; visibility:visible; }
+    .modal-box{ background:#fff; border-radius:8px; max-width:500px; width:90%; padding:2rem; position:relative; transform:translateY(-20px); transition:.3s; }
+    .modal-overlay.active .modal-box{ transform:translateY(0); }
+    .modal-gallery img, .modal-single img{ object-fit:cover; width:120px; height:120px; border-radius:50%; border:3px solid var(--gold); margin:0 .5rem; }
+    .modal-gallery{ display:flex; justify-content:center; margin-bottom:1rem; }
+    .modal-single{ display:flex; justify-content:center; margin-bottom:1rem; }
+    .close-btn{ position:absolute; top:.5rem; right:.5rem; background:none; border:none; font-size:1.5rem; color:var(--teal); cursor:pointer; }
+    #modalName{ text-align:center; margin-bottom:.5rem; font-weight:bold; }
+    #modalRole{ text-align:center; margin-bottom:.5rem; color:var(--gold); }
+    #modalInfo{ text-align:left; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="https://pyleamun.github.io/pyleamun2026/">
+        <img src="pyleaMUNfinallogo1.png" alt="Logo" height="40" class="me-2">
+        PyleaMUN
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/pyleamun2026/">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header>
+      <img src="pyleaMUNfinallogo.png" alt="Logo">
+      <h1>Meet the Team</h1>
+    </header>
+    <!-- Leadership -->
+    <div class="section">
+      <h2>PyleaMUN Leadership</h2>
+<button class="role-btn" 
+        data-name="Panagiotis Domvros" 
+        data-role="President & Director" 
+        data-img="domvros.png" 
+        data-info="<p><strong>Contact:</strong> pyleamun.president@gmail.com</p><p>Panagiotis Domvros, MA in Theatre Studies (University of Leeds) and BA in English Language &amp; Literature (Aristotle University of Thessaloniki), brings over two decades of educational leadership to our Model United Nations. Since 2017 he has served as Principal in Secondary Education spearheading intercultural dialogue initiatives, conflict-resolution workshops and digital‐skills training for both students and teachers. As President and Director, he will leverage his extensive experience as an I.E.P. expert trainer and teacher-trainer to cultivate a dynamic, inclusive environment that empowers delegates to develop their diplomatic, analytical and collaborative skills. He will oversee all conference operations.</p>">
+    President & Director
+</button>
+<button class="role-btn" 
+        data-name="Fani Vasilikou" 
+        data-role="Director & Chief Advisor" 
+        data-img="Vasilikou.jpg" 
+        data-info="<p>Fani Vasilikou has dedicated her life to empowering young minds. As an English teacher in Secondary Education for over 30 years, she has inspired generations of students with her passion for language, learning, and global citizenship. Holding a BA in English Language and Literature from Aristotle University of Thessaloniki and an MA in Enabling Learning from Canterbury University, she combines academic excellence with inclusive, student-centered teaching. For 15 years, she has been mentoring students to develop their voices and diplomatic skills in MUN conferences regionally and abroad. As the Co-director of the PyleaMun, she will contribute to the organization of the conference through her vision, leadership, and unwavering commitment aiming to establish it as a respected and enriching educational event.She will provide guidance and ensure the conference meets educational goals.</p>">
+    Director & Chief Advisor
+</button>
+<button class="role-btn" 
+        data-name="" 
+        data-role="Assistant to the President & Director" 
+        data-img="assistant.png" 
+        data-info="<p></p>">
+    Assistant to the President & Director
+</button>
+      
+    <!-- Core Executives -->
+    <div class="section">
+      <h2>Core Executives</h2>
+      <button class="role-btn" data-role="Finance Director" data-img="finance.png" data-info="<p>…</p>">Finance Director</button>
+      <button class="role-btn" data-name="" data-role="Press & Social Media Executive" data-img="press.png" data-info="<p>…</p>">Press & Social Media Executive</button>
+      <button class="role-btn" 
+  data-name="Iosif Gidiotis" 
+  data-role="Technical Executive Advisor" 
+  data-img="tech.png" 
+  data-info='<p><strong>Iosif Gidiotis</strong> (BA English Language and Literature, AUTh Greece; MPhil Applied Linguistics, TCD Ireland) is currently a doctoral researcher in education futures at the Department of Learning at the ITM School of KTH Royal Institute of Technology in Sweden. His academic work has been presented at international conferences, with earlier research focusing on the effects of the COVID-19 pandemic on the use of assessment for learning. He has been actively involved in professional networks related to language learning and teaching, as well as the digitalisation of higher education. He is an Associate Fellow of the Higher Education Academy (AFHEA) in the UK and a Member of the Association for Learning Technologies (ALT), in recognition of his contributions to teaching and learning in higher education.</p>'>
+  Technical Executive Advisor
+</button>
+      <button class="role-btn" data-name="Stavros Tambouratzis" data-role="Staff Executive Supervisor" data-img="tambouratzis.png" data-info="<p>Stavros Tambouratzis oversees and coordinates the staff executives, ensuring alignment between executive decisions and staff execution.</p>">Staff Executive Supervisor</button>
+</div>
+      
+    <!-- GA Secretariat -->
+<div class="section">
+  <h2>General Assembly Secretariat</h2>
+
+  <button class="role-btn"
+          data-name="Lydia Traka"
+          data-role="President of the GA"
+          data-img="ga_president.png"
+          data-info="
+            <p><strong>Contact:</strong> —</p>
+            <p>Hello everyone! My name is <strong>Lydia Traka</strong>, I am 16 years old, and I am beyond ecstatic to have been selected as the President of the GA in the very first PyleaMUN. I have participated in various MUN conferences, both Greek and international, gaining experience as a delegate and as a chair, assisting delegates and ensuring the conference runs smoothly. Now, it’s an honour to join the Secretariat and give my all to this community. No matter what challenges we face—MUNs are always unpredictable—I know I can rely on my advisors and the organizing team to present you all with the best experience. I look forward to meeting each of you and helping you fall in love with MUN as much as I have over the past few years. Let’s make some memories!</p>
+          ">
+    President of the GA
+  </button>
+
+  <button class="role-btn"
+          data-name="Konstantinos Eskitzis"
+          data-role="Secretary General"
+          data-img="sec_gen.png"
+          data-info="
+            <p><strong>Contact:</strong> eskikostas@gmail.com</p>
+            <p>I am <strong>Konstantinos Eskitzis</strong>, a 16-year-old student at the 1st Senior High School of Pylea, serving as Secretary General for the 1st PyleaMUN. With a passion for diplomacy and entrepreneurship and extensive experience as both delegate and chair, I’m committed to delivering a well-structured, intellectually stimulating experience. I look forward to working with you all to create productive debates and lifelong memories!</p>
+          ">
+    Secretary General
+  </button>
+
+  <button class="role-btn"
+          data-name="Eleftheria Paidaraki"
+          data-role="Deputy President of the GA"
+          data-img="dep_ga.png"
+          data-info="
+            <p><strong>Contact:</strong> —</p>
+            <p>My name is <strong>Eleftheria Paidaraki</strong>, I’m 16, and honored to serve as Deputy President of the GA for PyleaMUN. I’ll work closely with chairs, the academic team, and the Secretariat to ensure high academic standards and smooth committee operation. Having chaired and debated in several MUNs, I believe in teamwork, respect, and continuous growth. I’m committed to making this conference both professional and unforgettable for everyone.</p>
+          ">
+    Deputy President of the GA
+  </button>
+
+  <button class="role-btn"
+          data-name="Nikolaos Pavlidis Charalampidis"
+          data-role="Deputy Secretary General"
+          data-img="dep_sec.png"
+          data-info="
+            <p><strong>Contact:</strong> nkspvlds2009@gmail.com</p>
+            <p>I am <strong>Nikolaos Pavlidis Charalampidis</strong>, a 16-year-old student at the 1st Senior High School of Pylea. It is my utmost honour to serve as Deputy Secretary General for the 1st PyleaMUN. I have been participating in various MUN conferences for three years as both delegate and chair. As a young advocate, I am passionate about engaging and empowering my generation; I believe MUN conferences are vital for exploring and forging sustainable solutions. I look forward to collaborating with all participants to make this MUN a successful and unforgettable experience.</p>
+          ">
+    Deputy Secretary General
+  </button>
+</div>
+
+      
+<!-- Executive Team -->
+<div class="section">
+  <h2>Executive Team</h2>
+
+  <button class="role-btn"
+        data-name="Evangelos Papadopoulos"
+        data-role="Head of Executives"
+        data-img="head_exec.png"
+        data-info="<p><strong>Contact:</strong> vnglspapadopoulos@gmail.com</p><p>I am <strong>Evangelos Papadopoulos</strong>, a 15-year-old student at the First High School of Pylaia, serving as President of the Executive Board for the Pylaia Model United Nations session. Having participated in numerous MUN conferences both in Greece and internationally—as delegate and chair—I bring a deep understanding of diplomacy, international relations, and public speaking. I’m committed to making PyleaMUN an engaging, high-quality experience and look forward to fostering meaningful dialogue and future leaders!</p>">
+  Head of Executives
+</button>
+
+
+  <button class="role-btn" 
+    data-role="Deputy Head" 
+    data-img="dep_head_exec.png" 
+    data-info='<p>…</p>'>
+    Deputy Head
+  </button>
+
+  <button class="role-btn" 
+    data-role="Secretary of Executives" 
+    data-img="sec_exec.png" 
+    data-info='<p>…</p>'>
+    Secretary of Executives
+  </button>
+
+  <button class="role-btn" 
+    data-role="Executive Member" 
+    data-img="exec_member.png" 
+    data-info='<p>…</p>'>
+    Executive Member
+  </button>
+</div>
+    <!-- The Chairs -->
+    <div class="section">
+      <h2>The Chairs</h2>
+      
+      <button class="role-btn"
+              data-name="Supervision Team"
+              data-role="Committee Chairs Supervisors"
+              data-img1="supervisor1.png"
+              data-img2="supervisor2.png"
+              data-img3="supervisor3.png"
+              data-info="
+                <p><strong>Supervisor 1:</strong> John Smith</p>
+                <p><strong>Supervisor 2:</strong> Emily Johnson</p>
+                <p><strong>Supervisor 3:</strong> Michael Williams</p>
+                <p>The Committee Chairs Supervisors oversee and guide all committee chairs, ensuring smooth operation and adherence to MUN procedures.</p>
+              ">
+        Committee Chairs Supervisors
+      </button>
+
+      <button class="role-btn"
+              data-committee="UN Environment Programme"
+              data-img1="chair1.png"
+              data-img2="vice1.png"
+              data-img3="vice2.png"
+              data-info="
+                <p><strong>Chair:</strong> Alice Smith</p>
+                <p><strong>Vice Chair:</strong> Bob Jones</p>
+                <p><strong>Vice Chair:</strong> Carol Lee</p>
+              ">
+        UN Environment Programme
+      </button>
+
+      <button class="role-btn"
+              data-committee="Security Council"
+              data-img1="chair2.png"
+              data-img2="vice1_sc.png"
+              data-img3="vice2_sc.png"
+              data-info="
+                <p><strong>Chair:</strong> David Brown</p>
+                <p><strong>Vice Chair:</strong> Emma Wilson</p>
+                <p><strong>Vice Chair:</strong> Frank Taylor</p>
+              ">
+        Security Council
+      </button>
+
+      <button class="role-btn"
+              data-committee="Economic and Social Council"
+              data-img1="chair3.png"
+              data-img2="vice1_esc.png"
+              data-img3="vice2_esc.png"
+              data-info="
+                <p><strong>Chair:</strong> Grace Lee</p>
+                <p><strong>Vice Chair:</strong> Henry Kim</p>
+                <p><strong>Vice Chair:</strong> Irene Chen</p>
+              ">
+        Economic and Social Council
+      </button>
+
+      <button class="role-btn"
+              data-committee="NATO"
+              data-img1="chair4.png"
+              data-img2="vice1_nato.png"
+              data-img3="vice2_nato.png"
+              data-info="
+                <p><strong>Chair:</strong> Jack Patel</p>
+                <p><strong>Vice Chair:</strong> Karen Singh</p>
+                <p><strong>Vice Chair:</strong> Leo Martin</p>
+              ">
+        NATO
+      </button>
+
+      <button class="role-btn"
+              data-committee="World Health Organisation"
+              data-img1="chair5.png"
+              data-img2="vice1_who.png"
+              data-img3="vice2_who.png"
+              data-info="
+                <p><strong>Chair:</strong> Maria Gomez</p>
+                <p><strong>Vice Chair:</strong> Nathan Scott</p>
+                <p><strong>Vice Chair:</strong> Olivia White</p>
+              ">
+        World Health Organisation
+      </button>
+
+      <button class="role-btn"
+              data-committee="Human Rights Council"
+              data-img1="chair6.png"
+              data-img2="vice1_hrc.png"
+              data-img3="vice2_hrc.png"
+              data-info="
+                <p><strong>Chair:</strong> Patrick Young</p>
+                <p><strong>Vice Chair:</strong> Quinn Adams</p>
+                <p><strong>Vice Chair:</strong> Rachel Bell</p>
+              ">
+        Human Rights Council
+      </button>
+
+      <button class="role-btn"
+              data-committee="UN Women"
+              data-img1="chair7.png"
+              data-img2="vice1_unw.png"
+              data-img3="vice2_unw.png"
+              data-info="
+                <p><strong>Chair:</strong> Sarah Khan</p>
+                <p><strong>Vice Chair:</strong> Thomas Zhao</p>
+                <p><strong>Vice Chair:</strong> Ursula Park</p>
+              ">
+        UN Women
+      </button>
+    </div>
+    <!-- The Staff -->
+    <div class="section">
+      <h2>The Staff</h2>
+      <button class="role-btn" data-role="Head of Staff" data-img="head_staff.png" data-info="<p>…</p>">Head of Staff</button>
+      <button class="role-btn" data-role="Committee Staff Members" data-img="staff.png" data-info="<p>…</p>">Committee Staff Members</button>
+    </div>
+    <!-- The Press -->
+    <div class="section">
+      <h2>The Press</h2>
+      <button class="role-btn" data-role="Press Coordinator" data-img="press_coord.png" data-info="<p>…</p>">Press Coordinator</button>
+      <button class="role-btn" data-role="Press Members" data-img="press_members.png" data-info="<p>…</p>">Press Members</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <div class="modal-gallery" id="modalGallery" style="display:none;"></div>
+      <div class="modal-single" id="modalSingle" style="display:none;"></div>
+      <h3 id="modalName"></h3>
+      <p id="modalRole"></p>
+      <div id="modalInfo"></div>
+    </div>
+  </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btns = document.querySelectorAll('.role-btn');
+      const overlay = document.getElementById('modalOverlay');
+      const gallery = document.getElementById('modalGallery');
+      const single = document.getElementById('modalSingle');
+      const nameEl = document.getElementById('modalName');
+      const roleEl = document.getElementById('modalRole');
+      const infoEl = document.getElementById('modalInfo');
+      const closeBtn = document.getElementById('closeModal');
+
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          gallery.innerHTML = '';
+          single.innerHTML = '';
+          gallery.style.display = 'none';
+          single.style.display = 'none';
+
+          nameEl.textContent = btn.dataset.name || btn.dataset.committee || btn.dataset.role || '';
+          roleEl.textContent = btn.dataset.role || btn.dataset.committee || '';
+          infoEl.innerHTML = btn.dataset.info || '';
+
+          if (btn.dataset.img1) {
+            gallery.style.display = 'flex';
+            ['1','2','3'].forEach(i => {
+              const img = new Image();
+              img.src = btn.dataset['img'+i];
+              img.onerror = () => img.src = 'default-profile.png';
+              img.className = 'modal-gallery-img';
+              gallery.appendChild(img);
+            });
+          } else {
+            single.style.display = 'flex';
+            const img = new Image();
+            img.src = btn.dataset.img;
+            img.onerror = () => img.src = 'default-profile.png';
+            img.className = 'modal-single-img';
+            single.appendChild(img);
+          }
+
+          overlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeModal() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      closeBtn.addEventListener('click', closeModal);
+      overlay.addEventListener('click', e => e.target === overlay && closeModal());
+      document.addEventListener('keydown', e => e.key === 'Escape' && closeModal());
+    });
+  </script>
+</body>
+</html>
